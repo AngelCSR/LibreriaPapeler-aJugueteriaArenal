@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda - Librería</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+      
+      .hero {
+            background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+    background-size: cover;
+    color: white; /* Texto principal blanco */
+    height: 70vh;
+    display: flex;
+    flex-direction: column; /* Para que h1, p y botón se alineen verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    -webkit-text-stroke: 1px black;
+}
+
+/* Subtítulo */
+.hero p {
+    color: white !important; /* Mantener blanco */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para resaltar */
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón hero */
+.btnp {
+    color: white !important;
+    
+    border: 1px solid white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Sombra del texto */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btnp:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .card img {
+            height: 220px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
+           .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- LOGO + NOMBRE -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagenes/logo.png" alt="Logo Papelería Arenal">
+                <span>Papelería Arenal</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="libreria.html">Librería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="papeleria.html">Papelería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jugueteria.html">Juguetería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Conócenos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Bienvenido a Nuestra Librería</h1>
+            <p class="lead">Descubre historias que inspiran, educan y despiertan tu imaginación</p>
+            <a href="#categorias" class="btn btn-primary btn-lg btnp">Explorar Libros</a>
+        </div>
+    </section>
+
+    <!-- Libros en Oferta -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">📚 Libros en Oferta</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/libreria.jpg" class="card-img-top" alt="Oferta 1">
+                        <div class="card-body">
+                            <h5 class="card-title">El Alquimista</h5>
+                            <p class="card-text">Una historia sobre los sueños, el destino y la búsqueda interior. 30% de descuento.</p>
+                            <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('El Alquimista', 14)">Comprar</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/frankenstein.jpg" class="card-img-top" alt="Oferta 2">
+                        <div class="card-body">
+                            <h5 class="card-title">El Nombre del Viento</h5>
+                            <p class="card-text">Acompaña a Kvothe en una épica aventura mágica. Oferta especial por tiempo limitado.</p>
+                            <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('El Nombre del Viento', 18)">Comprar</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/soledad.jpg" class="card-img-top" alt="Oferta 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Orgullo y Prejuicio</h5>
+                            <p class="card-text">La clásica novela de Jane Austen en una edición de colección.</p>
+                            <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Orgullo y Prejuicio', 20)">Comprar</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/libreria.jpg" class="card-img-top" alt="Oferta 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Harry Potter y la Piedra Filosofal</h5>
+                            <p class="card-text">El inicio de la saga mágica más famosa. ¡Incluye separador de regalo!</p>
+                            <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Harry Potter y la Piedra Filosofal', 22)">Comprar</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías -->
+    <section id="categorias" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Categorías de Libros</h2>
+
+            <!-- Navegación secundaria -->
+            <ul class="nav nav-pills justify-content-center mb-4" id="categoriaNav">
+                <li class="nav-item"><button class="nav-link active" data-categoria="ficcion">Ficción</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="infantil">Infantil</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="educativos">Educativos</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="arte">Arte</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="ciencia">Ciencia</button></li>
+            </ul>
+
+            <!-- Contenedor de productos -->
+            <div class="row g-4" id="productosContainer">
+                <!-- Productos generados dinámicamente -->
+            </div>
+
+            <!-- Paginación -->
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center" id="paginacion">
+                    <!-- Botones de paginación generados dinámicamente -->
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+      <footer class="text-center">
+        <div class="container">
+    <p>&copy; 2025 Papelería Arenal. Todos los derechos reservados.</p>
+     <p>📍 Plaza Arenal #30, Alcázar de San Juan | ✉️ pedidosasreal@gmail.com</p>
+    <p>Teléfono: <a href="tel:+34926123456" class="text-white">+34 926 123 456</a></p>
+    <p>Síguenos en redes sociales: 
+      <a href="https://www.facebook.com/p/Librer%C3%ADa-Papeler%C3%ADa-Arenal-100057523896796/" class="text-white" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+      <a href="#" class="text-white">Instagram</a>
+    </p>
+  </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- Carrito ---
+        function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            const index = carrito.findIndex(item => item.nombre === nombre);
+            if (index >= 0) {
+                carrito[index].cantidad += 1;
+            } else {
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert(nombre + " se ha añadido al carrito.");
+        }
+
+   // Datos de ejemplo para cada categoría
+        const productos = {
+    ficcion: [
+        { nombre: "El Principito", img: "imagenes/principito.jpg", descripcion: "Un clásico sobre la inocencia y la sabiduría.", precio: 15 },
+        { nombre: "1984", img: "imagenes/soledad.jpg", descripcion: "Distopía de George Orwell sobre libertad y control.", precio: 20 },
+        { nombre: "Cien Años de Soledad", img: "imagenes/frankenstein.jpg", descripcion: "Realismo mágico de García Márquez.", precio: 22 },
+        { nombre: "Don Quijote de la Mancha", img: "imagenes/principito.jpg", descripcion: "Una aventura entre la locura y la realidad.", precio: 18 },
+        { nombre: "El Hobbit", img: "imagenes/soledad.jpg", descripcion: "La travesía de Bilbo Bolsón por la Tierra Media.", precio: 19 },
+        { nombre: "Drácula", img: "imagenes/frankenstein.jpg", descripcion: "El terror clásico que marcó un género.", precio: 17 },
+        { nombre: "Frankenstein", img: "imagenes/principito.jpg", descripcion: "Ciencia, ética y el miedo a lo desconocido.", precio: 16 },
+        { nombre: "Moby Dick", img: "imagenes/soledad.jpg", descripcion: "La épica persecución de una ballena blanca.", precio: 21 },
+        { nombre: "Crimen y Castigo", img: "imagenes/frankenstein.jpg", descripcion: "La culpa, el castigo y la redención humana.", precio: 23 },
+        { nombre: "Los Miserables", img: "imagenes/principito.jpg", descripcion: "Una historia de injusticia y esperanza.", precio: 24 },
+    ],
+
+    infantil: [
+        { nombre: "Cuentos de Hadas", img: "imagenes/principito.jpg", descripcion: "Historias mágicas e inspiradoras.", precio: 12 },
+        { nombre: "Alicia en el País de las Maravillas", img: "imagenes/soledad.jpg", descripcion: "Un viaje fantástico lleno de imaginación.", precio: 14 },
+        { nombre: "El Grúfalo", img: "imagenes/frankenstein.jpg", descripcion: "Diversión asegurada para los más pequeños.", precio: 11 },
+        { nombre: "Peter Pan", img: "imagenes/principito.jpg", descripcion: "El niño que no quería crecer.", precio: 13 },
+        { nombre: "El Libro de la Selva", img: "imagenes/soledad.jpg", descripcion: "Aventura y amistad en la jungla.", precio: 15 },
+        { nombre: "Pinocho", img: "imagenes/frankenstein.jpg", descripcion: "El muñeco de madera que soñaba con ser real.", precio: 12 },
+        { nombre: "Cuentos de los Hermanos Grimm", img: "imagenes/principito.jpg", descripcion: "Los clásicos más conocidos en una edición ilustrada.", precio: 16 },
+        { nombre: "Matilda", img: "imagenes/soledad.jpg", descripcion: "Una niña brillante con poderes extraordinarios.", precio: 14 },
+        { nombre: "Charlie y la Fábrica de Chocolate", img: "imagenes/frankenstein.jpg", descripcion: "El sabor de la imaginación.", precio: 15 },
+        { nombre: "La Sirenita", img: "imagenes/principito.jpg", descripcion: "Un cuento clásico sobre amor y sacrificio.", precio: 13 },
+    ],
+
+    educativos: [
+        { nombre: "Matemáticas Básicas", img: "imagenes/principito.jpg", descripcion: "Aprende los fundamentos con ejemplos prácticos.", precio: 13 },
+        { nombre: "Historia del Mundo", img: "imagenes/soledad.jpg", descripcion: "Desde las primeras civilizaciones hasta hoy.", precio: 16 },
+        { nombre: "Atlas Ilustrado", img: "imagenes/frankenstein.jpg", descripcion: "Una mirada al planeta en mapas y gráficos.", precio: 19 },
+        { nombre: "Geografía Global", img: "imagenes/principito.jpg", descripcion: "Conoce la Tierra como nunca antes.", precio: 18 },
+        { nombre: "Gramática Española", img: "imagenes/soledad.jpg", descripcion: "Domina la lengua de Cervantes.", precio: 14 },
+        { nombre: "Cálculo Fácil", img: "imagenes/frankenstein.jpg", descripcion: "Aprende matemáticas sin miedo.", precio: 17 },
+        { nombre: "Enciclopedia Escolar", img: "imagenes/principito.jpg", descripcion: "Un aliado indispensable para el estudio.", precio: 25 },
+        { nombre: "Aprende Inglés", img: "imagenes/soledad.jpg", descripcion: "Guía práctica para dominar un nuevo idioma.", precio: 20 },
+        { nombre: "Ciencias Naturales", img: "imagenes/frankenstein.jpg", descripcion: "El mundo que nos rodea explicado de forma sencilla.", precio: 15 },
+        { nombre: "Educación Financiera", img: "imagenes/principito.jpg", descripcion: "Aprende a administrar dinero desde joven.", precio: 22 },
+    ],
+
+    arte: [
+        { nombre: "Arte Moderno", img: "imagenes/principito.jpg", descripcion: "Una exploración visual del arte contemporáneo.", precio: 25 },
+        { nombre: "Historia del Arte", img: "imagenes/soledad.jpg", descripcion: "De la antigüedad al arte digital.", precio: 28 },
+        { nombre: "Diseño Gráfico", img: "imagenes/frankenstein.jpg", descripcion: "Guía para creativos y diseñadores.", precio: 20 },
+        { nombre: "Pintura al Óleo", img: "imagenes/principito.jpg", descripcion: "Técnicas y secretos del arte clásico.", precio: 24 },
+        { nombre: "Escultura Moderna", img: "imagenes/soledad.jpg", descripcion: "Una mirada al arte tridimensional.", precio: 27 },
+        { nombre: "Fotografía Creativa", img: "imagenes/frankenstein.jpg", descripcion: "Domina la composición y la luz.", precio: 23 },
+        { nombre: "Dibujo Artístico", img: "imagenes/principito.jpg", descripcion: "Aprende las bases del dibujo profesional.", precio: 19 },
+        { nombre: "Arte Abstracto", img: "imagenes/soledad.jpg", descripcion: "Colores, formas y emociones sin límites.", precio: 22 },
+        { nombre: "Diseño de Interiores", img: "imagenes/frankenstein.jpg", descripcion: "Transforma espacios con estilo y armonía.", precio: 26 },
+        { nombre: "Caligrafía Moderna", img: "imagenes/principito.jpg", descripcion: "El arte de escribir con elegancia.", precio: 18 },
+    ],
+
+    ciencia: [
+        { nombre: "Física para Todos", img: "imagenes/principito.jpg", descripcion: "La ciencia detrás del universo.", precio: 17 },
+        { nombre: "El Universo", img: "imagenes/soledad.jpg", descripcion: "Descubre los misterios del cosmos.", precio: 21 },
+        { nombre: "Biología Divertida", img: "imagenes/frankenstein.jpg", descripcion: "La vida explicada con humor y claridad.", precio: 15 },
+        { nombre: "Astronomía Básica", img: "imagenes/principito.jpg", descripcion: "Observa las estrellas como un científico.", precio: 19 },
+        { nombre: "Química Cotidiana", img: "imagenes/soledad.jpg", descripcion: "La ciencia detrás de lo que usamos cada día.", precio: 18 },
+        { nombre: "Genética Moderna", img: "imagenes/frankenstein.jpg", descripcion: "Descubre el ADN de la vida.", precio: 20 },
+        { nombre: "Ecología y Medio Ambiente", img: "imagenes/principito.jpg", descripcion: "Cómo cuidar el planeta Tierra.", precio: 22 },
+        { nombre: "Nanotecnología", img: "imagenes/soledad.jpg", descripcion: "La ciencia del futuro en miniatura.", precio: 25 },
+        { nombre: "Psicología Científica", img: "imagenes/frankenstein.jpg", descripcion: "Explora la mente humana desde la ciencia.", precio: 23 },
+        { nombre: "Inteligencia Artificial", img: "imagenes/principito.jpg", descripcion: "La revolución tecnológica explicada fácil.", precio: 26 },
+    ],
+};
+
+        
+        const productosContainer = document.getElementById("productosContainer");
+        const paginacion = document.getElementById("paginacion");
+        let categoriaActual = "ficcion";
+        let paginaActual = 1;
+        const productosPorPagina = 9;
+
+        function mostrarProductos() {
+            const lista = productos[categoriaActual];
+            const inicio = (paginaActual - 1) * productosPorPagina;
+            const fin = inicio + productosPorPagina;
+            const paginaProductos = lista.slice(inicio, fin);
+
+            productosContainer.innerHTML = paginaProductos.map(p => `
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="${p.img}?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="${p.nombre}">
+                        <div class="card-body">
+                            <h5 class="card-title">${p.nombre}</h5>
+                            <p class="card-text">${p.descripcion}</p>
+                            <p class="fw-bold text-primary">$${p.precio.toFixed(2)}</p>
+                            <button class="btn btn-primary w-100" onclick="agregarAlCarrito('${p.nombre}', ${p.precio})">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            const totalPaginas = Math.ceil(lista.length / productosPorPagina);
+            paginacion.innerHTML = '';
+            for (let i = 1; i <= totalPaginas; i++) {
+                paginacion.innerHTML += `
+                    <li class="page-item ${i === paginaActual ? 'active' : ''}">
+                        <button class="page-link">${i}</button>
+                    </li>`;
+            }
+
+            document.querySelectorAll("#paginacion button").forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    paginaActual = index + 1;
+                    mostrarProductos();
+                    productosContainer.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        }
+
+        document.querySelectorAll("#categoriaNav button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelector("#categoriaNav .active").classList.remove("active");
+                btn.classList.add("active");
+                categoriaActual = btn.dataset.categoria;
+                paginaActual = 1;
+                mostrarProductos();
+            });
+        });
+
+        mostrarProductos();
+    </script>
+</body>
+</html>

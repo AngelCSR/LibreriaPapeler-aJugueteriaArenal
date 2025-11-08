@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda - Juguetería</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      
+
+       .hero {
+            background: url('data:image/jpeg;base64,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') no-repeat center center;
+    background-size: cover;
+    color: white; /* Texto principal blanco */
+    height: 70vh;
+    display: flex;
+    flex-direction: column; /* Para que h1, p y botón se alineen verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    -webkit-text-stroke: 1px black;
+}
+
+/* Subtítulo */
+.hero p {
+    color: white !important; /* Mantener blanco */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para resaltar */
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón hero */
+.btnp {
+    color: white !important;
+    
+    border: 1px solid white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Sombra del texto */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btnp:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .card img {
+            height: 220px;
+            object-fit: cover;
+        }
+           .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- LOGO + NOMBRE -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagenes/logo.png" alt="Logo Papelería Arenal">
+                <span>Papelería Arenal</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="libreria.html">Librería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="papeleria.html">Papelería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jugueteria.html">Juguetería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Conócenos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Bienvenido a Nuestra Juguetería</h1>
+            <p class="lead">Diversión, aprendizaje y creatividad para todas las edades</p>
+            <a href="#categorias" class="btn btn-primary btn-lg btnp">Explorar Juguetes</a>
+        </div>
+    </section>
+
+    <!-- Juguetes en Oferta -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-danger">🎁 Juguetes en Oferta</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/juguete1.jpg"
+                            class="card-img-top" alt="Oferta 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Set de Ciencias</h5>
+                            <p class="card-text">Experimenta y aprende con un 20% de descuento.</p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="agregarAlCarrito('Set de Ciencias', 20)">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/juguete3.jpg"
+                            class="card-img-top" alt="Oferta 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Puzzle del Mundo</h5>
+                            <p class="card-text">Descubre el planeta jugando. ¡Oferta especial!</p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="agregarAlCarrito('Puzzle del Mundo', 18)">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/juguete5.jpg"
+                            class="card-img-top" alt="Oferta 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Coche RC</h5>
+                            <p class="card-text">Velocidad y tecnología con un 15% de descuento.</p>
+                            <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Coche RC', 38)">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="imagenes/juguete6.jpg"
+                            class="card-img-top" alt="Oferta 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Oso de Peluche</h5>
+                            <p class="card-text">El regalo perfecto con un 25% de descuento.</p>
+                            <a href="#" class="btn btn-primary"
+                                onclick="agregarAlCarrito('Oso de Peluche', 18)">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Categorías de Juguetes</h2>
+
+            <ul class="nav nav-pills justify-content-center mb-4" id="categoriaNav">
+                <li class="nav-item"><button class="nav-link active" data-categoria="educativos">Educativos</button>
+                </li>
+                <li class="nav-item"><button class="nav-link" data-categoria="exterior">Exterior</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="tecnologicos">Tecnológicos</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="construccion">Construcción</button></li>
+                <li class="nav-item"><button class="nav-link" data-categoria="peluches">Peluches</button></li>
+            </ul>
+
+            <div class="row g-4" id="productosContainer"></div>
+
+            <nav class="mt-4">
+                <ul class="pagination justify-content-center" id="paginacion"></ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+      <footer class="text-center">
+        <div class="container">
+    <p>&copy; 2025 Papelería Arenal. Todos los derechos reservados.</p>
+     <p>📍 Plaza Arenal #30, Alcázar de San Juan | ✉️ pedidosasreal@gmail.com</p>
+    <p>Teléfono: <a href="tel:+34926123456" class="text-white">+34 926 123 456</a></p>
+    <p>Síguenos en redes sociales: 
+      <a href="https://www.facebook.com/p/Librer%C3%ADa-Papeler%C3%ADa-Arenal-100057523896796/" class="text-white" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+      <a href="#" class="text-white">Instagram</a>
+    </p>
+  </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // --- Carrito ---
+        function agregarAlCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            const index = carrito.findIndex(item => item.nombre === nombre);
+            if (index >= 0) carrito[index].cantidad += 1;
+            else carrito.push({ nombre, precio, cantidad: 1 });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+             alert(nombre + " se ha añadido al carrito.");
+        }
+
+        // --- Productos ---
+    const productos = {
+    educativos: [
+        { nombre: "Bloques de Letras", img: "/imagenes/juguete1.jpg", descripcion: "Aprende el abecedario jugando.", precio: 15 },
+        { nombre: "Juego de Números", img: "/imagenes/juguete2.jpg", descripcion: "Ideal para aprender a contar.", precio: 18 },
+        { nombre: "Puzzle del Mundo", img: "/imagenes/juguete3.jpg", descripcion: "Mapa educativo para pequeños exploradores.", precio: 20 },
+        { nombre: "Set de Ciencias", img: "/imagenes/juguete4.jpg", descripcion: "Experimenta y aprende.", precio: 25 },
+        { nombre: "Juego de Memoria", img: "/imagenes/juguete5.jpg", descripcion: "Desarrolla la concentración.", precio: 14 },
+        { nombre: "Tangram", img: "/imagenes/juguete6.jpg", descripcion: "Fomenta la lógica y la creatividad.", precio: 13 },
+        { nombre: "Abaco de Colores", img: "/imagenes/juguete1.jpg", descripcion: "Aprende matemáticas de forma divertida.", precio: 19 },
+        { nombre: "Microscopio Infantil", img: "/imagenes/juguete2.jpg", descripcion: "Observa el mundo invisible.", precio: 30 },
+        { nombre: "Juego de Palabras", img: "/imagenes/juguete3.jpg", descripcion: "Crea palabras y mejora el vocabulario.", precio: 17 },
+        { nombre: "Mini Laboratorio", img: "/imagenes/juguete4.jpg", descripcion: "Descubre la ciencia en casa.", precio: 28 },
+        { nombre: "Juego Solar", img: "/imagenes/juguete5.jpg", descripcion: "Aprende sobre el sistema solar.", precio: 22 },
+        { nombre: "Kit de Electricidad", img: "/imagenes/juguete6.jpg", descripcion: "Construye circuitos seguros y educativos.", precio: 26 }
+    ],
+    exterior: [
+        { nombre: "Pelota de Playa", img: "/imagenes/juguete1.jpg", descripcion: "Perfecta para días de sol.", precio: 10 },
+        { nombre: "Cometa de Colores", img: "/imagenes/juguete2.jpg", descripcion: "Vuela alto con diversión.", precio: 16 },
+        { nombre: "Cuerda para Saltar", img: "/imagenes/juguete3.jpg", descripcion: "Ejercicio y diversión asegurada.", precio: 9 },
+        { nombre: "Balón de Fútbol", img: "/imagenes/juguete4.jpg", descripcion: "Ideal para juegos en el parque.", precio: 20 },
+        { nombre: "Pistola de Agua", img: "/imagenes/juguete5.jpg", descripcion: "Diversión en verano.", precio: 12 },
+        { nombre: "Frisbee", img: "/imagenes/juguete6.jpg", descripcion: "Vuelo estable y ligero.", precio: 8 },
+        { nombre: "Carrito de Carreras", img: "/imagenes/juguete1.jpg", descripcion: "Para los amantes de la velocidad.", precio: 18 },
+        { nombre: "Set de Jardinería Infantil", img: "/imagenes/juguete2.jpg", descripcion: "Aprende a cuidar las plantas.", precio: 22 },
+        { nombre: "Tiza Gigante para Pavimento", img: "/imagenes/juguete3.jpg", descripcion: "Crea dibujos al aire libre.", precio: 11 },
+        { nombre: "Mini Golf", img: "/imagenes/juguete4.jpg", descripcion: "Diversión garantizada.", precio: 24 },
+        { nombre: "Set de Raquetas", img: "/imagenes/juguete5.jpg", descripcion: "Perfecto para exteriores.", precio: 19 },
+        { nombre: "Casa de Campaña Infantil", img: "/imagenes/juguete6.jpg", descripcion: "Tu refugio en el jardín.", precio: 29 }
+    ],
+    tecnologicos: [
+        { nombre: "Robot Educativo", img: "/imagenes/juguete1.jpg", descripcion: "Aprende programación.", precio: 40 },
+        { nombre: "Drone Mini", img: "/imagenes/juguete2.jpg", descripcion: "Vuelo estable y control remoto.", precio: 55 },
+        { nombre: "Tablet Infantil", img: "/imagenes/juguete3.jpg", descripcion: "Educación y juegos seguros.", precio: 60 },
+        { nombre: "Coche RC", img: "/imagenes/juguete4.jpg", descripcion: "Alta velocidad y precisión.", precio: 45 },
+        { nombre: "Robot Mascota", img: "/imagenes/juguete5.jpg", descripcion: "Interactivo y divertido.", precio: 50 },
+        { nombre: "Microscopio Digital", img: "/imagenes/juguete6.jpg", descripcion: "Explora el mundo microscópico.", precio: 38 },
+        { nombre: "Teclado Musical Infantil", img: "/imagenes/juguete1.jpg", descripcion: "Despierta la creatividad musical.", precio: 35 },
+        { nombre: "Juego de Realidad Aumentada", img: "/imagenes/juguete2.jpg", descripcion: "Aprende y juega con tecnología.", precio: 48 },
+        { nombre: "Mini Consola Retro", img: "/imagenes/juguete3.jpg", descripcion: "Diversión clásica asegurada.", precio: 45 }
+    ],
+    construccion: [
+        { nombre: "Bloques Creativos", img: "/imagenes/juguete1.jpg", descripcion: "Construye sin límites.", precio: 25 },
+        { nombre: "LEGO Classic", img: "/imagenes/juguete2.jpg", descripcion: "Desarrolla la imaginación.", precio: 50 },
+        { nombre: "Set de Ingeniería", img: "/imagenes/juguete3.jpg", descripcion: "Crea estructuras y aprende física.", precio: 42 },
+        { nombre: "Castillo Medieval", img: "/imagenes/juguete4.jpg", descripcion: "Aventura en cada bloque.", precio: 55 },
+        { nombre: "Construcción Magnética", img: "/imagenes/juguete5.jpg", descripcion: "Fomenta la creatividad.", precio: 38 },
+        { nombre: "Bloques de Madera", img: "/imagenes/juguete6.jpg", descripcion: "Natural y ecológico.", precio: 20 },
+        { nombre: "Grúa Mecánica", img: "/imagenes/juguete1.jpg", descripcion: "Construye tu propia máquina.", precio: 48 },
+        { nombre: "Set de Cohetes", img: "/imagenes/juguete2.jpg", descripcion: "Lleva tus ideas al espacio.", precio: 60 },
+        { nombre: "LEGO Friends", img: "/imagenes/juguete3.jpg", descripcion: "Crea mundos con tus amigos.", precio: 40 }
+    ],
+    peluches: [
+        { nombre: "Oso de Peluche", img: "/imagenes/juguete1.jpg", descripcion: "Suave y abrazable.", precio: 25 },
+        { nombre: "Conejo Rosa", img: "/imagenes/juguete2.jpg", descripcion: "Amigo fiel para dormir.", precio: 18 },
+        { nombre: "Panda Gigante", img: "/imagenes/juguete3.jpg", descripcion: "Ideal para regalar.", precio: 35 },
+        { nombre: "Unicornio de Colores", img: "/imagenes/juguete4.jpg", descripcion: "Magia en cada abrazo.", precio: 28 },
+        { nombre: "Gato de Peluche", img: "/imagenes/juguete5.jpg", descripcion: "Suave y tierno.", precio: 20 },
+        { nombre: "Perro Dormilón", img: "/imagenes/juguete6.jpg", descripcion: "El compañero perfecto.", precio: 22 },
+        { nombre: "Elefante Azul", img: "/imagenes/juguete1.jpg", descripcion: "Ideal para los más pequeños.", precio: 24 },
+        { nombre: "Jirafa Suave", img: "/imagenes/juguete2.jpg", descripcion: "Amigo de aventuras.", precio: 27 },
+        { nombre: "Tigre Amigable", img: "/imagenes/juguete3.jpg", descripcion: "Colorido y divertido.", precio: 23 }
+    ]
+};
+
+
+
+        // --- Variables ---
+        const productosContainer = document.getElementById("productosContainer");
+        const paginacion = document.getElementById("paginacion");
+        let categoriaActual = "educativos"; // ✅ Categoría inicial correcta
+        let paginaActual = 1;
+        const productosPorPagina = 9;
+
+        // --- Mostrar productos ---
+        function mostrarProductos() {
+            const lista = productos[categoriaActual];
+            if (!lista) return; // seguridad
+
+            const inicio = (paginaActual - 1) * productosPorPagina;
+            const fin = inicio + productosPorPagina;
+            const paginaProductos = lista.slice(inicio, fin);
+
+            productosContainer.innerHTML = paginaProductos.map(p => `
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="${p.img}?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="${p.nombre}">
+          <div class="card-body">
+            <h5 class="card-title">${p.nombre}</h5>
+            <p class="card-text">${p.descripcion}</p>
+            <p class="fw-bold text-primary">$${p.precio.toFixed(2)}</p>
+            <button class="btn btn-primary w-100" onclick="agregarAlCarrito('${p.nombre}', ${p.precio})">Comprar</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+            // --- Paginación ---
+            const totalPaginas = Math.ceil(lista.length / productosPorPagina);
+            paginacion.innerHTML = "";
+            for (let i = 1; i <= totalPaginas; i++) {
+                paginacion.innerHTML += `
+        <li class="page-item ${i === paginaActual ? 'active' : ''}">
+          <button class="page-link" data-page="${i}">${i}</button>
+        </li>`;
+            }
+
+            // Agregar eventos de cambio de página
+            document.querySelectorAll("#paginacion button").forEach((btn, index) => {
+                btn.addEventListener("click", (event) => {
+                    event.preventDefault(); 
+                    paginaActual = index + 1;
+                    mostrarProductos();
+                    window.scrollTo({ top: 500, behavior: "smooth" });
+                    productosContainer.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        }
+
+        // --- Cambiar categoría ---
+        document.querySelectorAll("#categoriaNav button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                document.querySelector("#categoriaNav .active").classList.remove("active");
+                btn.classList.add("active");
+                categoriaActual = btn.dataset.categoria;
+                paginaActual = 1;
+                mostrarProductos();
+            });
+        });
+
+        // --- Inicializar ---
+        mostrarProductos();
+    </script>
+</body>
+
+</html>

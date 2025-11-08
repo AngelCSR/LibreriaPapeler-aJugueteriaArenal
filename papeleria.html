@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda - Papelería</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  
+    .hero {
+      background: url('data:image/jpeg;base64,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') ;
+    background-size: cover;
+    color: white; /* Texto principal blanco */
+    height: 70vh;
+    display: flex;
+    flex-direction: column; /* Para que h1, p y botón se alineen verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    -webkit-text-stroke: 1px black;
+}
+
+/* Subtítulo */
+.hero p {
+    color: white !important; /* Mantener blanco */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para resaltar */
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón hero */
+.btnp {
+    color: white !important;
+    
+    border: 1px solid white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Sombra del texto */
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btnp:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+    .section-title {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .card img {
+      height: 220px;
+      object-fit: cover;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 2rem 0;
+    }
+       .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+ <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- LOGO + NOMBRE -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagenes/logo.png" alt="Logo Papelería Arenal">
+                <span>Papelería Arenal</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="libreria.html">Librería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="papeleria.html">Papelería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jugueteria.html">Juguetería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Conócenos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Papelería y Oficina</h1>
+      <p class="lead">Todo lo que necesitas para estudiar, trabajar o crear</p>
+      <a href="#categorias" class="btn btn-primary btn-lg btnp">Explorar Productos</a>
+    </div>
+  </section>
+
+  <!-- Ofertas -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-danger">🛍️ Ofertas de Papelería</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="imagenes/papeleria1.jpg" class="card-img-top" alt="Libretas Premium">
+            <div class="card-body">
+              <h5 class="card-title">Pack de Libretas</h5>
+              <p class="card-text">Pack de 3 libretas con 20% de descuento.</p>
+              <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Pack de Libretas', 12)">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="imagenes/papeleria2.jpg" class="card-img-top" alt="Bolígrafos de Colores">
+            <div class="card-body">
+              <h5 class="card-title">Bolígrafos de Colores</h5>
+              <p class="card-text">Set de 10 bolígrafos surtidos. ¡Oferta especial!</p>
+              <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Bolígrafos de Colores', 8)">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="imagenes/papeleria3.jpg" class="card-img-top" alt="Organizador de Escritorio">
+            <div class="card-body">
+              <h5 class="card-title">Organizador de Escritorio</h5>
+              <p class="card-text">Mantén todo en orden con 15% de descuento.</p>
+              <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Organizador de Escritorio', 15)">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="imagenes/papeleria4.jpg" class="card-img-top" alt="Tijeras Profesionales">
+            <div class="card-body">
+              <h5 class="card-title">Tijeras Profesionales</h5>
+              <p class="card-text">Corte preciso y ergonómico. ¡Aprovecha!</p>
+              <a href="#" class="btn btn-primary" onclick="agregarAlCarrito('Tijeras Profesionales', 10)">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section id="categorias" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Categorías de Papelería</h2>
+
+      <ul class="nav nav-pills justify-content-center mb-4" id="categoriaNav">
+        <li class="nav-item"><button class="nav-link active" data-categoria="escritura">Escritura</button></li>
+        <li class="nav-item"><button class="nav-link" data-categoria="cuadernos">Cuadernos</button></li>
+        <li class="nav-item"><button class="nav-link" data-categoria="oficina">Oficina</button></li>
+        <li class="nav-item"><button class="nav-link" data-categoria="arte">Arte y Manualidades</button></li>
+      </ul>
+
+      <div class="row g-4" id="productosContainer"></div>
+
+      <nav class="mt-4">
+        <ul class="pagination justify-content-center" id="paginacion"></ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Footer -->
+     <footer class="text-center">
+        <div class="container">
+    <p>&copy; 2025 Papelería Arenal. Todos los derechos reservados.</p>
+     <p>📍 Plaza Arenal #30, Alcázar de San Juan | ✉️ pedidosasreal@gmail.com</p>
+    <p>Teléfono: <a href="tel:+34926123456" class="text-white">+34 926 123 456</a></p>
+    <p>Síguenos en redes sociales: 
+      <a href="https://www.facebook.com/p/Librer%C3%ADa-Papeler%C3%ADa-Arenal-100057523896796/" class="text-white" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+      <a href="#" class="text-white">Instagram</a>
+    </p>
+  </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // --- Carrito ---
+    function agregarAlCarrito(nombre, precio) {
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const index = carrito.findIndex(item => item.nombre === nombre);
+      if (index >= 0) carrito[index].cantidad += 1;
+      else carrito.push({ nombre, precio, cantidad: 1 });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+       alert(nombre + " se ha añadido al carrito.");
+    }
+
+    // --- Productos ---
+ const productos = {
+  escritura: [
+    { nombre: "Bolígrafo Azul", img: "imagenes/papeleria1.jpg", descripcion: "Clásico y duradero.", precio: 2 },
+    { nombre: "Bolígrafo Negro", img: "imagenes/papeleria2.jpg", descripcion: "Ideal para oficina.", precio: 2 },
+    { nombre: "Lápiz HB", img: "imagenes/papeleria3.jpg", descripcion: "Perfecto para escribir o dibujar.", precio: 1 },
+    { nombre: "Lápiz 2B", img: "imagenes/papeleria4.jpg", descripcion: "Trazo más oscuro, ideal para bocetos.", precio: 1.2 },
+    { nombre: "Marcadores Fluorescentes", img: "imagenes/papeleria1.jpg", descripcion: "Resalta tus apuntes.", precio: 4 },
+    { nombre: "Marcadores Permanentes", img: "imagenes/papeleria2.jpg", descripcion: "Resistentes y de larga duración.", precio: 5 },
+    { nombre: "Plumas de Gel", img: "imagenes/papeleria3.jpg", descripcion: "Escritura suave y colorida.", precio: 5 },
+    { nombre: "Rotuladores Finos", img: "imagenes/papeleria4.jpg", descripcion: "Perfectos para apuntes detallados.", precio: 6 },
+    { nombre: "Portaminas 0.5mm", img: "imagenes/papeleria1.jpg", descripcion: "Cómodo y preciso.", precio: 3 },
+    { nombre: "Portaminas 0.7mm", img: "imagenes/papeleria2.jpg", descripcion: "Para trazos más gruesos.", precio: 3 },
+    { nombre: "Set de Tintas", img: "imagenes/papeleria3.jpg", descripcion: "Colores intensos para plumas.", precio: 8 },
+    { nombre: "Bolígrafos de Colores", img: "imagenes/papeleria4.jpg", descripcion: "Paquete de 10 tonos vibrantes.", precio: 6 },
+    { nombre: "Corrector Líquido", img: "imagenes/papeleria1.jpg", descripcion: "Cubre errores al instante.", precio: 2.5 },
+    { nombre: "Borradores Artísticos", img: "imagenes/papeleria2.jpg", descripcion: "No manchan ni rompen el papel.", precio: 2 },
+    { nombre: "Sacapuntas Metálico", img: "imagenes/papeleria3.jpg", descripcion: "Compacto y duradero.", precio: 1.5 }
+  ],
+
+  cuadernos: [
+    { nombre: "Cuaderno A4", img: "imagenes/papeleria1.jpg", descripcion: "Tapa dura, 100 hojas.", precio: 8 },
+    { nombre: "Libreta Espiral", img: "imagenes/papeleria2.jpg", descripcion: "Diseños modernos y resistentes.", precio: 6 },
+    { nombre: "Bloc de Notas", img: "imagenes/papeleria3.jpg", descripcion: "Perfecto para recordatorios.", precio: 3 },
+    { nombre: "Agenda 2025", img: "imagenes/papeleria4.jpg", descripcion: "Organiza tu día a día.", precio: 12 },
+    { nombre: "Cuaderno Rayado", img: "imagenes/papeleria1.jpg", descripcion: "Ideal para escribir notas.", precio: 5 },
+    { nombre: "Cuaderno Cuadriculado", img: "imagenes/papeleria2.jpg", descripcion: "Perfecto para cálculos.", precio: 5 },
+    { nombre: "Cuaderno de Bocetos", img: "imagenes/papeleria3.jpg", descripcion: "Papel grueso para dibujo.", precio: 9 },
+    { nombre: "Planificador Semanal", img: "imagenes/papeleria4.jpg", descripcion: "Organiza tus metas.", precio: 10 },
+    { nombre: "Diario Personal", img: "imagenes/papeleria1.jpg", descripcion: "Con cerradura y diseño elegante.", precio: 11 },
+    { nombre: "Mini Bloc Adhesivo", img: "imagenes/papeleria2.jpg", descripcion: "Ideal para anotar tareas.", precio: 4 },
+    { nombre: "Cuaderno Ecológico", img: "imagenes/papeleria3.jpg", descripcion: "Hecho con papel reciclado.", precio: 7 },
+    { nombre: "Notas Adhesivas", img: "imagenes/papeleria4.jpg", descripcion: "Paquete multicolor.", precio: 3 },
+    { nombre: "Cuaderno de Proyectos", img: "imagenes/papeleria1.jpg", descripcion: "Diseño profesional.", precio: 9 },
+    { nombre: "Cuaderno Escolar", img: "imagenes/papeleria2.jpg", descripcion: "100 hojas resistentes.", precio: 6 },
+    { nombre: "Cuaderno de Recetas", img: "imagenes/papeleria3.jpg", descripcion: "Perfecto para tu cocina.", precio: 8 }
+  ],
+
+  oficina: [
+    { nombre: "Carpeta Archivadora", img: "imagenes/papeleria1.jpg", descripcion: "Mantén tus documentos ordenados.", precio: 7 },
+    { nombre: "Organizador de Escritorio", img: "imagenes/papeleria2.jpg", descripcion: "Ten todo a mano.", precio: 10 },
+    { nombre: "Grapadora Metálica", img: "imagenes/papeleria3.jpg", descripcion: "Duradera y eficaz.", precio: 9 },
+    { nombre: "Cinta Adhesiva", img: "imagenes/papeleria4.jpg", descripcion: "Ideal para oficina o casa.", precio: 3 },
+    { nombre: "Perforadora de Papel", img: "imagenes/papeleria1.jpg", descripcion: "Precisa y ergonómica.", precio: 8 },
+    { nombre: "Clips Metálicos", img: "imagenes/papeleria2.jpg", descripcion: "Caja de 100 unidades.", precio: 2 },
+    { nombre: "Bandeja para Documentos", img: "imagenes/papeleria3.jpg", descripcion: "3 niveles apilables.", precio: 11 },
+    { nombre: "Tijeras de Oficina", img: "imagenes/papeleria4.jpg", descripcion: "Corte limpio y seguro.", precio: 5 },
+    { nombre: "Cinta Doble Faz", img: "imagenes/papeleria1.jpg", descripcion: "Fuerte y versátil.", precio: 4 },
+    { nombre: "Calculadora de Escritorio", img: "imagenes/papeleria2.jpg", descripcion: "Pantalla grande y clara.", precio: 15 },
+    { nombre: "Portadocumentos", img: "imagenes/papeleria3.jpg", descripcion: "Elegante y funcional.", precio: 6 },
+    { nombre: "Pegamento en Barra", img: "imagenes/papeleria4.jpg", descripcion: "No tóxico y fácil de aplicar.", precio: 2 },
+    { nombre: "Cinta Correctora", img: "imagenes/papeleria1.jpg", descripcion: "Aplicación limpia.", precio: 3 },
+    { nombre: "Caja Organizadora", img: "imagenes/papeleria2.jpg", descripcion: "Guarda útiles y papeles.", precio: 9 },
+    { nombre: "Sello Personalizado", img: "imagenes/papeleria3.jpg", descripcion: "Ideal para oficina o negocios.", precio: 14 }
+  ],
+
+  arte: [
+    { nombre: "Acuarelas", img: "imagenes/papeleria1.jpg", descripcion: "Colores vivos para tus creaciones.", precio: 10 },
+    { nombre: "Pinceles de Artista", img: "imagenes/papeleria2.jpg", descripcion: "De distintos tamaños.", precio: 9 },
+    { nombre: "Papel para Dibujo", img: "imagenes/papeleria3.jpg", descripcion: "Alta calidad para tus obras.", precio: 7 },
+    { nombre: "Témperas Escolares", img: "imagenes/papeleria4.jpg", descripcion: "Seguras y lavables.", precio: 6 },
+    { nombre: "Set de Óleos", img: "imagenes/papeleria1.jpg", descripcion: "Colores profesionales.", precio: 15 },
+    { nombre: "Pinceles de Detalle", img: "imagenes/papeleria2.jpg", descripcion: "Para trazos finos.", precio: 8 },
+    { nombre: "Lienzo 30x40", img: "imagenes/papeleria3.jpg", descripcion: "Listo para pintar.", precio: 12 },
+    { nombre: "Caballetes de Madera", img: "imagenes/papeleria4.jpg", descripcion: "Ajustables y estables.", precio: 20 },
+    { nombre: "Tinta China", img: "imagenes/papeleria1.jpg", descripcion: "Para dibujos expresivos.", precio: 5 },
+    { nombre: "Pasteles Secos", img: "imagenes/papeleria2.jpg", descripcion: "Colores suaves y mezclables.", precio: 11 },
+    { nombre: "Set de Grafito", img: "imagenes/papeleria3.jpg", descripcion: "Lápices de dibujo artísticos.", precio: 9 },
+    { nombre: "Rotuladores de Arte", img: "imagenes/papeleria4.jpg", descripcion: "Doble punta, tonos profesionales.", precio: 18 },
+    { nombre: "Acrílicos", img: "imagenes/papeleria1.jpg", descripcion: "Colores brillantes y duraderos.", precio: 13 },
+    { nombre: "Set de Espátulas", img: "imagenes/papeleria2.jpg", descripcion: "Para técnicas mixtas.", precio: 7 },
+    { nombre: "Paleta Plástica", img: "imagenes/papeleria3.jpg", descripcion: "Para mezclar colores fácilmente.", precio: 4 }
+  ]
+};
+
+
+
+    const productosContainer = document.getElementById("productosContainer");
+    const paginacion = document.getElementById("paginacion");
+    let categoriaActual = "escritura";
+    let paginaActual = 1;
+    const productosPorPagina = 6;
+
+    function mostrarProductos() {
+      const lista = productos[categoriaActual];
+      const inicio = (paginaActual - 1) * productosPorPagina;
+      const fin = inicio + productosPorPagina;
+      const paginaProductos = lista.slice(inicio, fin);
+
+      productosContainer.innerHTML = paginaProductos.map(p => `
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="${p.img}?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="${p.nombre}">
+            <div class="card-body">
+              <h5 class="card-title">${p.nombre}</h5>
+              <p class="card-text">${p.descripcion}</p>
+              <p class="fw-bold text-primary">$${p.precio.toFixed(2)}</p>
+              <button class="btn btn-primary w-100" onclick="agregarAlCarrito('${p.nombre}', ${p.precio})">Comprar</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      const totalPaginas = Math.ceil(lista.length / productosPorPagina);
+      paginacion.innerHTML = '';
+      for (let i = 1; i <= totalPaginas; i++) {
+        paginacion.innerHTML += `
+          <li class="page-item ${i === paginaActual ? 'active' : ''}">
+            <button class="page-link">${i}</button>
+          </li>`;
+      }
+
+      document.querySelectorAll("#paginacion button").forEach((btn, index) => {
+        btn.addEventListener("click", (event) => {
+          event.preventDefault();
+          paginaActual = index + 1;
+          mostrarProductos();
+          productosContainer.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    }
+
+    document.querySelectorAll("#categoriaNav button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelector("#categoriaNav .active").classList.remove("active");
+        btn.classList.add("active");
+        categoriaActual = btn.dataset.categoria;
+        paginaActual = 1;
+        mostrarProductos();
+      });
+    });
+
+    mostrarProductos();
+  </script>
+</body>
+</html>
