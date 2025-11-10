@@ -1,5 +1,5 @@
 .hero {
-    background: url('imagenes/logopato2.jpg') no-repeat center center;
+    background: url('../imagenes/logopato2.jpg') no-repeat center center;
     background-size: cover;
     color: white; /* Texto principal blanco */
     height: 70vh;
