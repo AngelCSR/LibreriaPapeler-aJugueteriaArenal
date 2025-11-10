@@ -16,7 +16,7 @@
 
 /* Subtítulo */
   .hero p {
-        color: white !important; /* Mantener blanco */
+        color: black !important; /* Mantener blanco */
         text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para resaltar */
         font-size: 2rem;
         margin-bottom: 1.5rem;

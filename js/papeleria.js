@@ -89,7 +89,7 @@
     const paginacion = document.getElementById("paginacion");
     let categoriaActual = "escritura";
     let paginaActual = 1;
-    const productosPorPagina = 6;
+    const productosPorPagina = 9;
 
     function mostrarProductos() {
       const lista = productos[categoriaActual];
