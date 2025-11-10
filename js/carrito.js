@@ -13,11 +13,11 @@ function renderCarrito() {
         carritoBody.innerHTML += `
             <tr>
                 <td>${prod.nombre}</td>
-                <td>$${prod.precio.toFixed(2)}</td>
+                <td>${prod.precio.toFixed(2)} €</td>
                 <td>
                     <input type="number" min="1" value="${prod.cantidad}" class="form-control form-control-sm" onchange="updateCantidad(${index}, this.value)">
                 </td>
-                <td>$${subtotal.toFixed(2)}</td>
+                <td>${subtotal.toFixed(2)} €</td>
                 <td>
                     <button class="btn btn-danger btn-sm" onclick="eliminarProducto(${index})">Eliminar</button>
                 </td>
