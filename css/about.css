@@ -41,6 +41,12 @@
       transform: translateY(30px);
       animation: fadeUp 1s ease forwards;
     }
+      .hero p {
+        color: white !important; /* Mantener blanco */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Sombra para resaltar */
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        }
 
     @media (max-width: 768px) {
       .section-img {
@@ -102,4 +108,12 @@
     @keyframes growLine {
       from { width: 0; }
       to { width: 60px; }
+    }
+        .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
