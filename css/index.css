@@ -63,3 +63,59 @@
       transform: translateY(-8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+        padding: 1.5rem;
+         background-position: center center;
+          background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 40vh;
+        padding: 1rem;
+         background-position: center center;
+          background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+ /* --- ANIMACIONES KEYFRAMES --- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes growLine {
+      from { width: 0; }
+      to { width: 60px; }
+    }
