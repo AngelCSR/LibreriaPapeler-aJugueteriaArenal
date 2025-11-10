@@ -1,0 +1,25 @@
+.hero {
+            background: url('https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+    -webkit-text-stroke: 1px black;
+        }
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
+           .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }

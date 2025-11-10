@@ -1,0 +1,22 @@
+.hero {
+    background: url('../imagenes/carrito.ljpg.png') no-repeat center center;
+    background-size: contain; /* Ajusta la imagen completa */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 80vh; /* Puedes ajustar más si quieres más altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+           .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
