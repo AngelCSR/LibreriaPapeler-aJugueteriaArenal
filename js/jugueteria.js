@@ -11,7 +11,7 @@
         // --- Productos ---
     const productos = {
     educativos: [
-        { nombre: "Bloques de Letras", img: "/imagenes/juguete1.webp", descripcion: "Aprende el abecedario jugando.", precio: 15 },
+        { nombre: "Bloques de Letras", img: "/imagenes/juguete1.jpg", descripcion: "Aprende el abecedario jugando.", precio: 15 },
         { nombre: "Juego de Números", img: "/imagenes/juguete2.jpg", descripcion: "Ideal para aprender a contar.", precio: 18 },
         { nombre: "Puzzle del Mundo", img: "/imagenes/juguete3.jpg", descripcion: "Mapa educativo para pequeños exploradores.", precio: 20 },
         { nombre: "Set de Ciencias", img: "/imagenes/juguete4.jpg", descripcion: "Experimenta y aprende.", precio: 25 },
@@ -25,7 +25,7 @@
         { nombre: "Kit de Electricidad", img: "/imagenes/juguete6.jpg", descripcion: "Construye circuitos seguros y educativos.", precio: 26 }
     ],
     exterior: [
-        { nombre: "Pelota de Playa", img: "/imagenes/juguete1.webp", descripcion: "Perfecta para días de sol.", precio: 10 },
+        { nombre: "Pelota de Playa", img: "/imagenes/juguete1.jpg", descripcion: "Perfecta para días de sol.", precio: 10 },
         { nombre: "Cometa de Colores", img: "/imagenes/juguete2.jpg", descripcion: "Vuela alto con diversión.", precio: 16 },
         { nombre: "Cuerda para Saltar", img: "/imagenes/juguete3.jpg", descripcion: "Ejercicio y diversión asegurada.", precio: 9 },
         { nombre: "Balón de Fútbol", img: "/imagenes/juguete4.jpg", descripcion: "Ideal para juegos en el parque.", precio: 20 },
@@ -39,7 +39,7 @@
         { nombre: "Casa de Campaña Infantil", img: "/imagenes/juguete6.jpg", descripcion: "Tu refugio en el jardín.", precio: 29 }
     ],
     tecnologicos: [
-        { nombre: "Robot Educativo", img: "/imagenes/juguete1.webp", descripcion: "Aprende programación.", precio: 40 },
+        { nombre: "Robot Educativo", img: "/imagenes/juguete1.jpg", descripcion: "Aprende programación.", precio: 40 },
         { nombre: "Drone Mini", img: "/imagenes/juguete2.jpg", descripcion: "Vuelo estable y control remoto.", precio: 55 },
         { nombre: "Tablet Infantil", img: "/imagenes/juguete3.jpg", descripcion: "Educación y juegos seguros.", precio: 60 },
         { nombre: "Coche RC", img: "/imagenes/juguete4.jpg", descripcion: "Alta velocidad y precisión.", precio: 45 },
@@ -50,7 +50,7 @@
         { nombre: "Mini Consola Retro", img: "/imagenes/juguete3.jpg", descripcion: "Diversión clásica asegurada.", precio: 45 }
     ],
     construccion: [
-        { nombre: "Bloques Creativos", img: "/imagenes/juguete1.webp", descripcion: "Construye sin límites.", precio: 25 },
+        { nombre: "Bloques Creativos", img: "/imagenes/juguete1.jpg", descripcion: "Construye sin límites.", precio: 25 },
         { nombre: "LEGO Classic", img: "/imagenes/juguete2.jpg", descripcion: "Desarrolla la imaginación.", precio: 50 },
         { nombre: "Set de Ingeniería", img: "/imagenes/juguete3.jpg", descripcion: "Crea estructuras y aprende física.", precio: 42 },
         { nombre: "Castillo Medieval", img: "/imagenes/juguete4.jpg", descripcion: "Aventura en cada bloque.", precio: 55 },
@@ -61,7 +61,7 @@
         { nombre: "LEGO Friends", img: "/imagenes/juguete3.jpg", descripcion: "Crea mundos con tus amigos.", precio: 40 }
     ],
     peluches: [
-        { nombre: "Oso de Peluche", img: "/imagenes/juguete1.webp", descripcion: "Suave y abrazable.", precio: 25 },
+        { nombre: "Oso de Peluche", img: "/imagenes/juguete1.jpg", descripcion: "Suave y abrazable.", precio: 25 },
         { nombre: "Conejo Rosa", img: "/imagenes/juguete2.jpg", descripcion: "Amigo fiel para dormir.", precio: 18 },
         { nombre: "Panda Gigante", img: "/imagenes/juguete3.jpg", descripcion: "Ideal para regalar.", precio: 35 },
         { nombre: "Unicornio de Colores", img: "/imagenes/juguete4.jpg", descripcion: "Magia en cada abrazo.", precio: 28 },
